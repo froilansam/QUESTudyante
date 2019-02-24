@@ -1,0 +1,66 @@
+.pages
+	.page.no-toolbar.no-navbar(data-page='projects')
+		.page-content
+			.navbarpages
+				.nav_left_logo
+					a(href='index-2.html')
+						img(src='/assets/images/logo.png', alt='', title='')
+				.nav_right_button
+					a(href='/parents/home')
+						img(src='/assets/images/icons/white/menu.png', alt='', title='')
+			#pages_maincontent
+				h2.page_title Gantimpala
+				.page_content
+					.buttons-row
+						a.tab-link.active.button(href='#taba1') Gantimpala
+						a.tab-link.button(href='#taba2') Gatimpala Request
+					.tabs-animated-wrap
+						.tabs
+							#taba1.tab.active
+								.page_content
+									ul.features_list_detailed
+										-if(gantimpala)
+											-for(var i = 0; i < gantimpala.length; i++)
+												-if(gantimpala[i].strStatus == 'Accept')
+													li
+														.feat_small_icon
+															img(src='/assets/images/icons/black/trophy.png', alt='', title='')
+														.feat_small_details
+															h4 #{gantimpala[i].strName}
+															a Quest Made: 0/3
+															br
+															a Time Left: 
+																span#lol
+															input#dateEnd(type='hidden' value=gantimpala[i].strDate)
+														.view_more
+															a(href='/parents/quests')
+																img(src='/assets/images/icons/white/next.png', alt='', title='')
+									
+										
+
+							#taba2.tab
+								.page_content
+									.list-block
+										ul.posts.features_list_detailed
+											-if(gantimpala)
+												-for(var i = 0; i < gantimpala.length; i++)
+													-if(gantimpala[i].strStatus == 'Pending')
+														li.swipeout
+															.swipeout-content.item-content
+																.feat_small_icon
+																	img(src='/assets/images/icons/black/trophy.png', alt='', title='')
+																.feat_small_details
+																	h4#rewardName #{gantimpala[i].strName}
+																.post_swipe
+																	img(src='/assets/images/swipe_more.png', alt='', title='')
+															.swipeout-actions-right
+																a.acceptQuest.action1.open-popup(href='#', gantimpalaID=gantimpala[i].intGantimpalaID data-popup='.popup-quest')
+																	img(src='/assets/images/icons/white/check1.png', alt='', title='')
+																a.action1.open-popup(href='#', data-popup='.popup-quest')
+																	img(src='/assets/images/icons/white/ekis.png', alt='', title='')
+										.clear
+										#loadMore
+											img(src='/assets/images/load_posts.png', alt='', title='')
+										#showLess
+											img(src='/assets/images/icons/white/next.png', alt='', title='')
+										

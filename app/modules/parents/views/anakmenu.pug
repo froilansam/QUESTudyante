@@ -1,0 +1,79 @@
+.pages
+	.page.no-toolbar.no-navbar(data-page='projects')
+		.page-content
+			.navbarpages
+				.nav_left_logo
+					a(href='index-2.html')
+						img(src='/assets/images/logo.png', alt='', title='')
+				.nav_right_button
+					a(href='/parents/home')
+						img(src='/assets/images/icons/white/menu.png', alt='', title='')
+			#pages_maincontent
+				h2.page_title Anakventure
+				.page_content
+					
+					.buttons-row
+						a.tab-link.active.button(href='#tab1') Kahilingan List
+						a.tab-link.button(href='#tab2') Kahilingan
+					.tabs-animated-wrap
+						.tabs
+							#tab1.tab.active
+								.page_content
+									.contactform
+										form
+											.page_content
+													
+												.feat_small_details
+													label Kahilingan:
+													textarea#kahilinganInput.form_textarea(name='message', rows='', cols='')
+													input#submitKahilingan.form_submit(type='submit', name='submit', value='Add')
+
+												.clear
+											
+
+												
+									ul.features_list_detailed
+										-if(gantimpala)
+											-for(var i = 0; i < gantimpala.length; i++)
+												-if(gantimpala[i].strStatus == 'Pending')
+													li
+														.feat_small_icon
+															img(src='/assets/images/icons/black/trophy.png', alt='', title='')
+														.feat_small_details
+															h4 #{gantimpala[i].strName}
+															a Status: 
+																span(style='color: gold') Pending
+										
+
+							#tab2.tab
+								.page_content
+									ul.features_list_detailed
+										li
+											.feat_small_icon
+												img(src='/assets/images/icons/black/trophy.png', alt='', title='')
+											.feat_small_details
+												h4 Nike Shoes
+												a Quest Made: 3/4
+												br
+												a Time Left: 00:11:11
+											.view_more
+												a(href='/parents/anakquest')
+													img(src='/assets/images/icons/white/next.png', alt='', title='')
+										li
+											.feat_small_icon
+												img(src='/assets/images/icons/black/trophy.png', alt='', title='')
+											.feat_small_details
+												h4 Laptop
+												a Quest Made: 2/4
+												br
+												a Time Left: 00:11:11
+											.view_more
+												a(href='/parents/anakquest')
+													img(src='/assets/images/icons/white/next.png', alt='', title='')
+										.clear
+										#loadMore
+											img(src='/assets/images/load_posts.png', alt='', title='')
+										#showLess
+											img(src='/assets/images/icons/white/next.png', alt='', title='')
+
+						

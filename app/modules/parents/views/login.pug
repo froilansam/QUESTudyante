@@ -1,0 +1,256 @@
+doctype html
+html
+	// Mirrored from sindevo.com/mobix/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 23 Feb 2019 15:45:17 GMT
+	head
+		meta(charset='utf-8')
+		meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui')
+		meta(name='apple-mobile-web-app-capable', content='yes')
+		meta(name='apple-mobile-web-app-status-bar-style', content='black')
+		link(rel='apple-touch-icon', href='/assets/images/apple-touch-icon.png')
+		link(rel='apple-touch-startup-image', media='(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)', href='apple-touch-startup-image-640x1096.html')
+		title mobix - mobile web app template
+		link(rel='stylesheet', href='/assets/css/framework7.css')
+		link(rel='stylesheet', href='/assets/css/colors/magenta.css')
+		link(type='text/css' rel='stylesheet', href='/assets/css/style.css')
+		link(type='text/css', rel='stylesheet', href='/assets/css/swipebox.css')
+		link(type='text/css', rel='stylesheet', href='/assets/css/animations.css')
+		link(href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,700,900', rel='stylesheet', type='text/css')
+	body#mobile_wrap
+		.statusbar-overlay
+		.panel-overlay
+		.panel.panel-left.panel-cover
+			.user_login_info
+				.user_thumb
+					img(src='/assets/images/profile.jpg', alt='', title='')
+					.user_details
+						p
+							| Hi, 
+							span John Doe
+					.user_social
+						a.open-popup(href='#', data-popup='.popup-social')
+							img(src='/assets/images/icons/white/twitter.png', alt='', title='')
+				nav.user-nav
+					ul
+						li
+							a.close-panel(href='features.html')
+								img(src='/assets/images/icons/white/settings.png', alt='', title='')
+								span Settings
+						li
+							a.close-panel(href='features.html')
+								img(src='/assets/images/icons/white/briefcase.png', alt='', title='')
+								span Account
+						li
+							a.close-panel(href='features.html')
+								img(src='/assets/images/icons/white/message.png', alt='', title='')
+								span Messages
+								strong.green 12
+						li
+							a.close-panel(href='features.html')
+								img(src='/assets/images/icons/white/download.png', alt='', title='')
+								span Downloads
+								strong.blue 5
+						li
+							a.close-panel(href='index-2.html')
+								img(src='/assets/images/icons/white/lock.png', alt='', title='')
+								span Logout
+		.panel.panel-right.panel-cover
+			h2 Search
+			.search_form
+				form#SearchForm(method='post')
+					input.search_input(type='text', name='keyword', value='', placeholder='keyword')
+					input#submit.search_submit(type='image', name='submit', src='/assets/images/icons/white/search.png')
+			.clear
+			h3 POPULAR POSTS
+			ul.popular_posts
+				li
+					a.close-panel(href='blog-single.html')
+						img(src='/assets/images/photos/photo1.jpg', alt='', title='')
+					span
+						a.close-panel(href='blog-single.html') Design is not just what it looks like and feels like.
+				li
+					a.close-panel(href='blog-single.html')
+						img(src='/assets/images/photos/photo2.jpg', alt='', title='')
+					span
+						a.close-panel(href='blog-single.html') Fashion fades, only style remains the same.
+				li
+					a.close-panel(href='blog-single.html')
+						img(src='/assets/images/photos/photo3.jpg', alt='', title='')
+					span
+						a.close-panel(href='blog-single.html') Sed ut perspiciatis unde omnis iste accusantium.
+				li
+					a.close-panel(href='blog-single.html')
+						img(src='/assets/images/photos/photo4.jpg', alt='', title='')
+					span
+						a.close-panel(href='blog-single.html') Nemo enim ipsam voluptatem quia voluptas.
+				li
+					a.close-panel(href='blog-single.html')
+						img(src='/assets/images/photos/photo5.jpg', alt='', title='')
+					span
+						a.close-panel(href='blog-single.html') Totam rem aperiam, eaque ipsa quae ab illo inventore veritatis.
+		.views
+			.content-block-login
+				h4 LOGIN
+				.form_logo
+					img(src='/assets/images/logo.png', alt='', title='')
+				.loginform
+					#LoginForm
+						input#userNamelogin.form_input.required(type='text', name='Username', value='', placeholder='username')
+						input#passWordlogin.form_input.required(type='password', name='Password', value='', placeholder='password')
+						.forgot_pass
+							a.open-popup(href='#', data-popup='.popup-forgot') Forgot Password?
+						input#signIn.form_submit(type='submit', name='submit', value='Magulang Log In')
+						input#signInBata.form_submit(type='submit', name='submit', value='Anak Log In')
+					.signup_bottom
+						p Don't have an account?
+						a.open-popup(href='#', data-popup='.popup-signup') SIGN UP
+		.popup.popup-signup
+			.content-block-login
+				h4 REGISTER
+				.form_logo
+					img(src='/assets/images/logo.png', alt='', title='')
+				.loginform
+					.page-content
+						.buttons-row
+							a.tab-link.active.button(href='#tabab1') Magulang
+							a.tab-link.button(href='#tabab2') Anak
+						.tabs-animated-wrap
+							.tabs
+								#tabab1.tab.active
+									#regForm
+										input#firstName.form_input.required(type='text', name='firstName', value='', placeholder='First Name')
+										input#lastName.form_input.required(type='text', name='lastName', value='', placeholder='Last Name')
+										input#emailAddress.form_input.required(type='text', name='emailAddress', value='', placeholder='E-mail Address')
+										input#userName.form_input.required(type='text', name='userName', value='', placeholder='Username')
+										input#passWord.form_input.required(type='password', name='passWord', value='', placeholder='Password')
+										input#Next.form_submit.open-popup(type='button', value='Next')
+									.signup_social
+										a.signup_facebook.external(href='http://www.facebook.com/') FACEBOOK
+										a.signup_twitter.external(href='http://www.twitter.com/') TWITTER
+								#tabab2.tab
+									#regForme
+										input#code.form_input.required(type='text', name='code', value='', placeholder=`Parents' Code`)
+										input#firstNameBata.form_input.required(type='text', name='firstName', value='', placeholder='First Name')
+										input#lastNameBata.form_input.required(type='text', name='lastName', value='', placeholder='Last Name')
+										input#emailAddressBata.form_input.required(type='text', name='emailAddress', value='', placeholder='E-mail Address')
+										input#userNameBata.form_input.required(type='text', name='userName', value='', placeholder='Username')
+										input#passWordBata.form_input.required(type='password', name='passWord', value='', placeholder='Password')
+										input#signupBata.form_submit.open-popup(type='button', value='Sign Up')
+									.signup_social
+										a.signup_facebook.external(href='http://www.facebook.com/') FACEBOOK
+										a.signup_twitter.external(href='http://www.twitter.com/') TWITTER
+				.close_loginpopup_button
+					a.close-popup(href='#')
+						img(src='/assets/images/icons/white/menu_close.png', alt='', title='')
+	
+	
+		script(type='text/javascript', src='/assets/js/jquery-1.10.1.min.js')
+		script(src='/assets/js/jquery.validate.min.js', type='text/javascript')
+		script(type='text/javascript', src='/assets/js/framework7.js')
+		script(type='text/javascript', src='/assets/js/classie.js')
+		script(type='text/javascript', src='/assets/js/selectFx.js')
+		script(type='text/javascript', src='/assets/js/my-app.js')
+		script(type='text/javascript', src='/assets/js/jquery.swipebox.js')
+		script(type='text/javascript', src='/assets/js/email.js')
+		script(type='text/javascript', src='/assets/js/swal.js')
+		script.
+			$(document).ready(function(){
+				var data = {};
+				$('.tab-link[href=#tabab1]').trigger('click');
+				$(document).on('click', '.tab-link', function(){
+					var tab = $(this).attr('href');
+					if(tab == '#tabab1'){
+						data = {
+							firstName: $('#firstName').val(),
+							lastName: $('#lastName').val(),
+							emailAddress: $('#emailAddress').val(),
+							userName: $('#userName').val(),
+							passWord: $('#passWord').val(),
+							indi: 'Magulang'
+						}
+					}
+					else if(tab == '#tabab2'){
+						data = {
+							code: $('#code').val(),
+							firstName: $('#firstNameBata').val(),
+							lastName: $('#lastNameBata').val(),
+							emailAddress: $('#emailAddressBata').val(),
+							userName: $('#userNameBata').val(),
+							passWord: $('#passWordBata').val(),
+							indi: 'Bata',
+						}
+					}
+				})
+				$(document).on('click', '#signIn', function(){
+					$.post('/parents/authparent', {
+						userName: $('#userNamelogin').val(),
+						passWord: $('#passWordlogin').val(),
+					}).then(function(data){
+						if(data == 'Yes'){
+							window.location.href = '/parents/home'
+						}
+						else{
+							swal({
+								title: 'Incorrect Username or Password!',
+								text: 'Please try again.',
+								icon: 'error',
+								button: 'Okay',
+							})
+						}
+					})
+				})
+
+				$(document).on('click', '#signInBata', function(){
+					$.post('/parents/authbata2', {
+						userName: $('#userNamelogin').val(),
+						passWord: $('#passWordlogin').val(),
+					}).then(function(data){
+						if(data == 'Yes'){
+							window.location.href = '/parents/anakhome'
+						}
+						else{
+							swal({
+								title: 'Incorrect Username or Password!',
+								text: 'Please try again.',
+								icon: 'error',
+								button: 'Okay',
+							})
+						}
+					})
+				})
+				
+				$(document).on('click', '#Next', function(){
+					console.log(data)
+					$.post('/parents/paymaya', {
+							firstName: $('#firstName').val(),
+							lastName: $('#lastName').val(),
+							emailAddress: $('#emailAddress').val(),
+							userName: $('#userName').val(),
+							passWord: $('#passWord').val(),
+							indi: 'Magulang'
+						}).then(function(data){
+
+						window.location.href = data.url;
+					})
+				})
+
+				$(document).on('click', '#signupBata', function(){
+					$.post('/parents/authbata', {
+						code: $('#code').val(),
+						firstName: $('#firstNameBata').val(),
+						lastName: $('#lastNameBata').val(),
+						emailAddress: $('#emailAddressBata').val(),
+						userName: $('#userNameBata').val(),
+						passWord: $('#passWordBata').val(),
+					}).then(function(data){
+						if(data == "Yes"){
+							window.location.href = '/parents/anakhome';
+						}
+						else if(data == "No"){
+							alert('Parent Code does not exist!')
+						}
+					})
+				})
+				
+				 	
+			})
+		// Mirrored from sindevo.com/mobix/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 23 Feb 2019 15:45:52 GMT

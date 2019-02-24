@@ -1,0 +1,66 @@
+.pages
+	.page.no-toolbar.no-navbar(data-page='projects')
+		.page-content
+			.navbarpages
+				.nav_left_logo
+					a(href='index-2.html')
+						img(src='/assets/images/logo.png', alt='', title='')
+				.nav_right_button
+					a(href='menu.html')
+						img(src='/assets/images/icons/white/menu.png', alt='', title='')
+			#pages_maincontent
+				h2.page_title#rewardTitle
+				.page_content
+					.contactform
+						form
+							label Name:
+							input.form_input(type='text', name='name', value='')
+							label Email:
+							input.form_input(type='text', name='email', value='')
+							label Select:
+							.selector_overlay
+								select.cs-select.cs-skin-overlay.selectoptions
+									option(value='', disabled='disabled', selected='') select options
+									option(value='1') select one
+									option(value='2') select two
+									option(value='3') select three
+									option(value='4') select four
+									option(value='5') select five
+							label Autocomplete (type "a")
+							input#autocomplete-dropdown.form_input(type='text', placeholder='type for example letter a')
+							label Radio:
+							label.label-radio.item-content
+								// Checked by default
+								input(type='radio', name='my-radio', value='Books', checked='checked')
+								.item-inner
+									.item-title Books
+							label.label-radio.item-content
+								// Checked by default
+								input(type='radio', name='my-radio', value='Movies')
+								.item-inner
+									.item-title Movies
+							label Checkbox:
+							label.label-checkbox.item-content
+								// Checked by default
+								input(type='checkbox', name='my-checkbox', value='Books', checked='checked')
+								.item-media
+									i.icon.icon-form-checkbox
+								.item-inner
+									.item-title Books
+							label.label-checkbox.item-content
+								input(type='checkbox', name='my-checkbox', value='Movies')
+								.item-media
+									i.icon.icon-form-checkbox
+								.item-inner
+									.item-title Movies
+							label Switch:
+							.item-content
+								.item-inner
+									.item-title Enable Option
+									.item-input
+										label.label-switch
+											input(type='checkbox')
+											.checkbox
+							label Message:
+							textarea.form_textarea(name='message', rows='', cols='')
+							input#submit.form_submit(type='submit', name='submit', value='Send')

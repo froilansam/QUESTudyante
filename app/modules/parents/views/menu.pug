@@ -1,0 +1,66 @@
+.pages
+	.page.no-toolbar.no-navbar(data-page='projects')
+		.page-content
+			.navbarpages
+				.nav_left_logo
+					a(href='index-2.html')
+						img(src='/assets/images/logo.png', alt='', title='')
+				.nav_right_button
+					a(href='/parents/home')
+						img(src='/assets/images/icons/white/menu.png', alt='', title='')
+			#pages_maincontent
+				h2.page_title Anakventure
+				.page_content
+					.buttons-row
+						a.tab-link.active.button(href='#tab1') Anakis
+						a.tab-link.button(href='#tab2') Anak Request
+					.tabs-animated-wrap
+						.tabs
+							#tab1.tab.active
+								.page_content
+									
+									ul.features_list_detailed
+										-if(anaks)
+											-for(var i = 0; i < anaks.length; i++)
+												-if(anaks[i].strStatus == 'Accept')
+													li
+														.feat_small_icon
+															img(src='/assets/images/icons/black/user.png', alt='', title='')
+														.feat_small_details
+															h4 #{anaks[i].strFirstName} #{anaks[i].strLastName}
+															a #{anaks[i].strEmail}
+															br
+															a Rewards: 3 | Pending: 3
+														.view_more
+															a(href=`/parents/rewards/${anaks[i].intChildID}`)
+																img(src='/assets/images/icons/white/next.png', alt='', title='')
+										
+
+							#tab2.tab
+								.page_content
+									.list-block
+										ul.posts.features_list_detailed
+											-if(anaks)
+												-for(var i = 0; i < anaks.length; i++)
+													-if(anaks[i].strStatus == 'Pending')
+														li.swipeout
+															.swipeout-content.item-content
+																.feat_big_icon
+																	img(src='/assets/images/icons/black/user.png', alt='', title='')
+																.feat_small_details
+																	h4 #{anaks[i].strFirstName} #{anaks[i].strLastName}
+																	a #{anaks[i].strEmail}
+																.post_swipe
+																	img(src='/assets/images/swipe_more.png', alt='', title='')
+															.swipeout-actions-right
+																a.checkAnak.action1(href='#' childID=anaks[i].intChildID)
+																	img(src='/assets/images/icons/white/check1.png', alt='', title='')
+																a.ekisAnak.action1(href='#' childID=anaks[i].intChildID)
+																	img(src='/assets/images/icons/white/ekis.png', alt='', title='')
+										.clear
+										#loadMore
+											img(src='/assets/images/load_posts.png', alt='', title='')
+										#showLess
+											img(src='/assets/images/icons/white/next.png', alt='', title='')
+
+						

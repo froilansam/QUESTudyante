@@ -1,8 +1,18 @@
-# FroyExpress Boilerplate
-A quick and simple ExpressJS boilerplate for projects.
+# QUESTudyante
+
+a mobile-responsive web application that can be used in school but we also bring it home because every students begin learning at home. It serves as a platform for parents to help their children to maximize their full potential. Parents could subscribe and create accounts for their children. Parents could set series of activity to hone their passion and skills, and be productive for the day. It can be for academics, for their health, for chores, etc. In exchange, children will request something to have some fruit for their hardwork because we believe that achieving small goals can be fulfilling emotionally, physically, psychologically, etc. They will always feel that they accomplished something that is what are self-esteem needs. This application can better us.
+
+# Team E-namo
+
+## Team Member
+
+- Malibiran, Froilan Sam S.
+- Santuico, Fritz Jerold F.
+- Yambao, Luigi Carlo V.
 
 ## How to Install
-1. Fork this repository. The fork button should be at the upper right of this page. Fork it to your personal GitHub profiles. By doing so, you'll have a copy of the boilerplate in your respective profiles. To check, your URL should be like this: `https://github.com/your_username/froyexpress`
+
+1. Fork this repository. The fork button should be at the upper right of this page. Fork it to your personal GitHub profiles. By doing so, you'll have a copy of the application in your respective profiles. To check, your URL should be like this: `https://github.com/your_username/froyexpress`
 
 2. After forking, clone it to your local machines. Forking gives you ownership to the copy of the project, thus you'll have automatic read and write (pull and push) privileges. No need to authenticate as long as you have configured your SSH keys.
 
@@ -12,17 +22,21 @@ A quick and simple ExpressJS boilerplate for projects.
 
 5. Run the application using `node index.js` or `nodemon` if you have installed it (`npm install nodemon -g`).
 
-## Quirks
+Once all of those are satisfied, you should be able to see your list of users in the `/parents/login` route when you run the app.
 
-If you want to enable the database part of the application, then you have to check the following first:
-- MySQL should be installed
-- You have a usable credential to login to your MySQL database, provide them in the .env file
-- You have created a database in MySQL, provide the name in the .env file
-- You have a table called 'users' with the following columns
-    - id (*int, not null, auto_increment*)
-    - name (*varchar(50), not null*)
-    - age (*int*)
-- Set *id* column as the primary key
-- Your table should have at least one record
+# Technologies Used
 
-Once all of those are satisfied, you should be able to see your list of users in the `/index` route when you run the app.
+## Programming Language
+
+- Javascript
+
+## Frameworks
+
+- Node.JS
+- ExpressJs
+
+## Libraries
+
+- Mobix
+- Moment
+- Paymaya SDK
